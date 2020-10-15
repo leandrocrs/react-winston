@@ -1,0 +1,76 @@
+{
+  "name": "react-winston",
+  "description": "React hooks and binds to make easier use winston logger",
+  "bugs": {
+    "url": "https://github.com/leandrocrs/react-winston/issues"
+  },
+  "homepage": "https://github.com/leandrocrs/react-winston",
+  "keywords": [
+    "winston",
+    "react",
+    "log",
+    "logger",
+    "hook"
+  ],
+  "scripts": {
+    "build": "bili",
+    "format": "prettier --write src",
+    "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "coverage": "jest --passWithNoTests --coverage",
+    "test": "jest --passWithNoTests"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0",
+    "winston": "^3.0.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/leandrocrs/react-winston.git",
+  "author": "leandrocrs <contato@leandrw.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@types/jest": "^26.0.14",
+    "@types/react": "^16.9.52",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "bili": "^5.0.5",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": ">=4",
+    "jest": "^26.5.3",
+    "lint-staged": ">=10",
+    "prettier": "^2.1.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.14.0",
+    "react-test-renderer": "^16.14.0",
+    "rollup": "^2.30.0",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "semantic-release": "^17.2.1",
+    "typescript": "^4.0.3",
+    "winston": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+  }
+}
