@@ -53,4 +53,5 @@ jobs:
       run: yarn release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_USER: leandrocrs
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
