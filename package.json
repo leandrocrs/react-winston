@@ -12,23 +12,33 @@
     "logger",
     "hook"
   ],
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "bili",
     "format": "prettier --write src",
-    "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "lint": "eslint --cache --ext .js --ext .jsx --ext .ts --ext .tsx src",
     "coverage": "jest --passWithNoTests --coverage",
+    "release": "semantic-release",
+    "pretest": "yarn lint",
     "test": "jest --passWithNoTests"
   },
+  "version": "1.0.0",
+  "repository": "https://github.com/leandrocrs/react-winston.git",
+  "author": "leandrocrs <contato@leandrw.com.br>",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.3.0",
     "winston": "^3.0.0"
   },
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/leandrocrs/react-winston.git",
-  "author": "leandrocrs <contato@leandrw.com.br>",
-  "license": "MIT",
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/github": "^7.1.1",
+    "@semantic-release/npm": "^7.0.6",
+    "@semantic-release/release-notes-generator": "^9.0.1",
     "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^3.4.2",
     "@types/jest": "^26.0.14",
